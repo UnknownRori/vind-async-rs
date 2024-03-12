@@ -1,0 +1,27 @@
+[package]
+name = "vind-async"
+version = "0.1.0"
+edition = "2021"
+authors = ["UnknownRori <68576836+UnknownRori@users.noreply.github.com>"]
+description = "Simple and fun async runtime for Rust"
+license = "MIT"
+repository = "https://github.com/UnknownRori/vind-async"
+keywords = ["thread", "parallel", "concurrency"]
+categories = ["concurrency"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+futures-core = { version = "0.3.30", default-features = false, features = ["alloc"] }
+futures-task = { version = "0.3.30", default-features = false, features = ["alloc"] }
+unknownrori-simple-thread-pool = "0.2.0"
+vind-mutex = { path = "../libs/vind-mutex" }
+vind-proc-macro = { path = "../libs/vind-proc-macro" }
+
+[features]
+default = ["alloc", "std", "macro", "rt", "rt-multi-threaded"]
+alloc = []
+std = []
+macro = []
+rt = []
+rt-multi-threaded = []

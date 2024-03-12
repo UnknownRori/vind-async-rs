@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "./libs/vind-mutex",
+    "./libs/vind-proc-macro",
+    "./vind-async", "examples/quote-api-fetcher", "libs/vind-network",
+]
+resolver = "2"
